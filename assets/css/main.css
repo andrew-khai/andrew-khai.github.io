@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 100%;
+  max-width: 1000px;
 }
 
 .skills-container .scroller__inner {
@@ -49,11 +49,11 @@
   -webkit-mask: linear-gradient(
     90deg,
     transparent,
-    white 20%,
-    white 80%,
+    white 50%,
+    white 100%,
     transparent
   );
-  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask: linear-gradient(90deg, transparent, white 50%, white 100%, transparent);
 }
 
 .scroller[data-animated="true"] .scroller__inner {
@@ -1955,7 +1955,7 @@ textarea {
 					background-color: #F2600B;
 				}
 
-				ul.social li a.fa-instagram {
+				ul.social li a.fa-angellist {
 					background-color: #E0D7C8;
 				}
 
