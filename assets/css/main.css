@@ -98,12 +98,31 @@ svg {
 
 .first-link,
 .project-links {
-	text-decoration: none;
+  text-decoration: none;
+  font-size: 20px;
+  position: relative;
+  display: inline-block;
+  padding: 0.2em 0;
 }
 
-.first-link:hover,
-.project-links:hover {
-	text-decoration: underline;
+.first-link::after,
+.project-links::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #43B3E0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.first-link:hover::after,
+.first-link:focus::after,
+.project-links:hover::after,
+.project-links:focus::after {
+  width: 100%;
 }
 
 html,
@@ -2220,7 +2239,7 @@ ul.actions li:first-child {
 }
 
 .wrapper.style2 {
-	background-color: #fafafa;
+	background-color: white;
 	text-shadow: 1px 1px 0px #fff;
 }
 
