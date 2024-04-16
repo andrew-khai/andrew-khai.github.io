@@ -1,25 +1,22 @@
-// Infinite scroller for skills section
-// const scrollers = document.querySelectorAll('.scroller');
+document.addEventListener('DOMContentLoaded', () => {
+  const articles = document.querySelectorAll('.box.style2');
 
-// const addAnimation = () => {
-//   scrollers.forEach(scroller => {
-//     // Get the scroller inner container and its content
-//     const scrollerInner = scroller.querySelector(".scroller__inner");
-//     const scrollerInnerContent = Array.from(scrollerInner.children);
+  articles.forEach(article => {
+      const normalImage = article.querySelector('.normal-image');
+      const gifImage = article.querySelector('.gif-image');
 
-//     // Calculate the total width of the scroller inner content
-//     const totalWidth = scrollerInnerContent.reduce((width, item) => width + item.offsetWidth, 0);
+      console.log(normalImage); // Debugging
 
-//     // Clone and append the items to create an infinite loop
-//     scrollerInnerContent.forEach(item => {
-//       const clone = item.cloneNode(true);
-//       scrollerInner.appendChild(clone);
-//     });
+      article.addEventListener('mouseenter', () => {
+          console.log('Mouse enter event'); // Debugging
+          normalImage.style.display = 'none';
+          gifImage.style.display = 'block';
+      });
 
-//     // Set the width of the scroller inner container to accommodate all cloned items
-//     scrollerInner.style.width = `${totalWidth}px`;
-//   });
-// };
-
-// // Call the function to add the animation
-// addAnimation();
+      article.addEventListener('mouseleave', () => {
+          console.log('Mouse leave event'); // Debugging
+          normalImage.style.display = 'block';
+          gifImage.style.display = 'none';
+      });
+  });
+});

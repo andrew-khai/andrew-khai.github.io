@@ -2165,6 +2165,17 @@ ul.actions li:first-child {
 	margin-bottom: 0.5em;
 }
 
+.box.style2 {
+	max-width: 32em;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	transition: transform 0.3s ease;
+}
+
+.box.style2:hover {
+	transform: scale(1.03);
+}
+
 .box.style2 h3 {
 	margin-bottom: 0.25em;
 }
@@ -2177,6 +2188,9 @@ ul.actions li:first-child {
 	width: auto;
 }
 
+.box.style2 .gif-image {
+	display: none;
+}
 /* Icons */
 
 .icon {
@@ -2628,12 +2642,6 @@ body>article {
 	}
 
 	.box.style1 {
-		max-width: 32em;
-		margin-left: auto !important;
-		margin-right: auto !important;
-	}
-
-	.box.style2 {
 		max-width: 32em;
 		margin-left: auto !important;
 		margin-right: auto !important;
