@@ -51,3 +51,34 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 });
+
+const words = ['Full-Stack Software Engineer', 'Collaborator', 'Problem Solver'];
+const typingDemo = document.querySelector('.typing-demo');
+
+let currentWordIndex = 0;
+let currentCharacterIndex = 0;
+let isDeleting = false;
+
+function typeWords() {
+    const currentWord = words[currentWordIndex];
+    const speed = 100; // Adjust typing speed as needed
+
+    if (!isDeleting && currentCharacterIndex < currentWord.length) {
+        typingDemo.textContent += currentWord[currentCharacterIndex];
+        currentCharacterIndex++;
+        setTimeout(typeWords, speed);
+    } else if (isDeleting && currentCharacterIndex > 0) {
+        typingDemo.textContent = currentWord.substring(0, currentCharacterIndex - 1);
+        currentCharacterIndex--;
+        setTimeout(typeWords, speed);
+    } else {
+        isDeleting = !isDeleting;
+        if (!isDeleting) {
+            currentWordIndex = (currentWordIndex + 1) % words.length;
+        }
+        setTimeout(typeWords, 500); // Delay before typing the next word
+    }
+}
+
+// Start typing
+typeWords();

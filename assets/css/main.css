@@ -85,6 +85,33 @@
   }
 } */
 
+.typing-wrapper {
+	height: 2em;
+}
+
+.typing-demo {
+    max-width: max-content;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    /* border-right: 3px solid; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
+	font-style: italic;
+	white-space: nowrap;
+	vertical-align: top;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
 svg {
 	/* height: 25%;
 	width: 25%; */
@@ -496,6 +523,11 @@ footer>p {
 }
 
 @media screen and (max-width: 980px) {
+
+	.typing-wrapper {
+		display: flex;
+		justify-content: center;
+	}
 
 	.container {
 		width: 100%;
