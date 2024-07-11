@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-const words = ['Full-Stack Software Engineer', 'Collaborator', 'Problem Solver'];
+const words = ['Full-Stack Software Engineer', 'Teamplayer', 'Problem Solver'];
 const typingDemo = document.querySelector('.typing-demo');
 
 let currentWordIndex = 0;
