@@ -94,7 +94,7 @@
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     /* border-right: 3px solid; */
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2em;
+    font-size: 1.75em;
 	font-style: italic;
 	white-space: nowrap;
 	vertical-align: top;
